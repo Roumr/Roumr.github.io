@@ -6,8 +6,6 @@
     <title>Mi Portafolio</title>
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Include Marked.js from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         /* Custom colors */
         .bg-primary {
@@ -35,15 +33,17 @@
     <!-- Header -->
     <header class="bg-primary text-white py-4">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">Mi Portafolio</h1>
+            <h1 class="text-4xl font-bold">Ing. Arturo Ramirez</h1>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="bg-secondary text-white py-16">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Bienvenido a mi portafolio</h2>
-            <p class="mb-8">Soy un técnico electricista, informático, analista de ciberseguridad y abogado asesor.</p>
+            <h2 class="text-3xl font-bold mb-4">Bienvenido a mi portafolio personal</h2>
+            <p class="mb-8">Desde pequeño, me atrajo la idea de resolver misterios con tecnología avanzada, inspirándome a estudiar Electromecánica Industrial para entender sistemas eléctricos y electrónicos. Luego, amplié mi expertise con la Ingeniería en Sistemas Computacionales, destacándome en programación, análisis de sistemas y gestión digital. Actualmente, curso una Licenciatura en Derecho, integrando conocimientos técnicos y legales. Soy experto en análisis de sistemas eléctricos, administración digital, captura de datos y generación de reportes, combinando habilidades técnicas y jurídicas para abordando variedad de desafios.
+
+</p>
             <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-semibold py-2 px-4 rounded-lg">Contacta conmigo</a>
         </div>
     </section>
@@ -63,6 +63,15 @@
                     <img src="image3.jpg" alt="Imagen 3" class="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg border border-gray-200">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-primary">Formación Académica</h2>
+            <p class="mb-4">Aquí puedes ver detalles sobre mi formación académica y proyectos.</p>
+            <a href="education.html" class="bg-primary hover:bg-blue-800 text-white py-2 px-4 rounded-lg text-lg">Ver Formación Académica</a>
         </div>
     </section>
 
@@ -88,16 +97,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-16 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-primary">Formación Académica y Proyectos</h2>
-            <div id="education-content" class="text-left max-w-2xl mx-auto">
-                <!-- Aquí se cargará el contenido Markdown -->
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-primary text-white py-4">
         <div class="container mx-auto text-center">
@@ -110,27 +109,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript to fetch and display Markdown -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Ruta al archivo Markdown
-            const markdownFile = 'education.md';
-
-            // Función para cargar el archivo Markdown
-            fetch(markdownFile)
-                .then(response => response.text())
-                .then(text => {
-                    // Convertir Markdown a HTML
-                    const htmlContent = marked(text);
-                    // Insertar el HTML convertido en el div correspondiente
-                    document.getElementById('education-content').innerHTML = htmlContent;
-                })
-                .catch(error => {
-                    console.error('Error cargando el archivo Markdown:', error);
-                });
-        });
-    </script>
 
 </body>
 </html>

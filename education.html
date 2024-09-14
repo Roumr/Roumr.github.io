@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación Académica</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .bg-primary {
+            background-color: #1e3a8a; /* Azul oscuro */
+        }
+        .text-primary {
+            color: #1e3a8a; /* Azul oscuro */
+        }
+        .text-secondary {
+            color: #3b82f6; /* Azul claro */
+        }
+        .pdf-preview {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Formación Académica</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-primary">Mi Formación Académica</h2>
+            <div class="text-left mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Ingeniería en Sistemas Computacionales (2018-2023 en TECNM)</h3>
+                <p>Concluida y en proceso de titulación.</p>
+            </div>
+            <div class="text-left mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Carrera Técnico Bachiller en Electromecánica Industrial (2014-2018 en CONALEP)</h3>
+                <p>Formación técnica en electromecánica.</p>
+            </div>
+            <div class="text-left mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Licenciatura en Derecho (2024 - Actualidad en CUEJ Veracruz)</h3>
+                <p>Licenciatura en Derecho concluida.</p>
+            </div>
+
+            <!-- Documentos y Certificados -->
+            <div class="text-left mb-8">
+                <h2 class="text-3xl font-bold mb-4 text-primary">Documentos y Certificados</h2>
+                <ul class="list-disc pl-5">
+                    <li><a href="documentos/isc.pdf" class="text-secondary hover:underline" target="_blank">Certificado de Ingeniería en Sistemas Computacionales (PDF)</a></li>
+                    <li><a href="documentos/emec.pdf" class="text-secondary hover:underline" target="_blank">Certificado de Electromecánica Industrial (PDF)</a></li>
+                    <li><a href="documentos/derecho.pdf" class="text-secondary hover:underline" target="_blank">Certificado de Licenciatura en Derecho (PDF)</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de cursos -->
+            <section class="bg-gray-100 py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-8 text-center">Mis Cursos</h2>
+
+                    <!-- Grid de cursos -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Curso 1 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Google] Comercio electrónico.pdf" target="_blank">
+                                <img src="imagenes/[Google] Comercio electrónico 1 of 1.png" alt="Comercio Electrónico" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Comercio Electrónico</h3>
+                                    <p class="text-sm text-gray-600">Curso de Comercio Electrónico por Google.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 2 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-fundamentos-matematicas.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-fundamentos-matematicas 1 of 1.png" alt="Fundamentos de Matemáticas" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Fundamentos de Matemáticas</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en fundamentos de matemáticas.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 3 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-ciberseguridad-empresas.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-ciberseguridad-empresas 1 of 1.png" alt="Ciberseguridad en Empresas" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Ciberseguridad en Empresas</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en ciberseguridad para empresas.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 4 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-electronica.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-electronica 1 of 1.png" alt="Electrónica" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Electrónica</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en electrónica.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 5 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-excel-avanzado-macros.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-excel-avanzado-macros 1 of 1.png" alt="Excel Avanzado con Macros" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Excel Avanzado con Macros</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en Excel avanzado y macros.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 6 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-java-persistencia.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-java-persistencia 1 of 1.png" alt="Persistencia en Java" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Persistencia en Java</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en persistencia con Java.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 7 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-microsoft-powerpoint.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-microsoft-powerpoint 1 of 1.png" alt="Microsoft PowerPoint" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Microsoft PowerPoint</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en Microsoft PowerPoint.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 8 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-microsoft-word.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-microsoft-word 1 of 1.png" alt="Microsoft Word" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Microsoft Word</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en Microsoft Word.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 9 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-prompt-engineering-chatgpt.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-prompt-engineering-chatgpt 1 of 1.png" alt="Prompt Engineering ChatGPT" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Prompt Engineering ChatGPT</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en ingeniería de prompts para ChatGPT.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 10 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-pruebas-software.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-pruebas-software 1 of 1.png" alt="Pruebas de Software" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Pruebas de Software</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en pruebas de software.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 11 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] diploma-terminal.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] diploma-terminal 1 of 1.png" alt="Terminal" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Terminal</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en uso de la terminal.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 12 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] Gestion documentos Powerpoint.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] Gestion documentos Powerpoint 1 of 1.png" alt="Gestión de Documentos PowerPoint" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Gestión de Documentos PowerPoint</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en gestión de documentos PowerPoint.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 13 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] Gestión documentos Microsoft Word.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] Gestión documentos Microsoft Word 1 of 1.png" alt="Gestión de Documentos Microsoft Word" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Gestión de Documentos Microsoft Word</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en gestión de documentos en Microsoft Word.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 14 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] Git y GitHub.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] Git y GitHub 1 of 1.png" alt="Git y GitHub" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Git y GitHub</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en Git y GitHub.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 15 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] HTML y CSS Definitivo.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] HTML y CSS Definitivo 1 of 1.png" alt="HTML y CSS Definitivo" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">HTML y CSS Definitivo</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en HTML y CSS.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 16 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Platzi] JAVA SE orientado a objetos.pdf" target="_blank">
+                                <img src="imagenes/[Platzi] JAVA SE orientado a objetos 1 of 1.png" alt="JAVA SE Orientado a Objetos" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">JAVA SE Orientado a Objetos</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Platzi en JAVA SE orientado a objetos.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 17 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[SoloLearn] Curso de HTML.pdf" target="_blank">
+                                <img src="imagenes/[SoloLearn] Curso de HTML 1 of 1.png" alt="Curso de HTML" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Curso de HTML</h3>
+                                    <p class="text-sm text-gray-600">Certificado de SoloLearn en HTML.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 18 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[SoloLearn] Curso de Java.pdf" target="_blank">
+                                <img src="imagenes/[SoloLearn] Curso de Java 1 of 1.png" alt="Curso de Java" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Curso de Java</h3>
+                                    <p class="text-sm text-gray-600">Certificado de SoloLearn en Java.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Curso 19 -->
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <a href="cursos/[Udemy] Git avanzado.pdf" target="_blank">
+                                <img src="imagenes/[Udemy] Git avanzado 1 of 1.png" alt="Git Avanzado" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold text-gray-800">Git Avanzado</h3>
+                                    <p class="text-sm text-gray-600">Diploma de Udemy en Git avanzado.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Lic. Arturo Ramirez Muñoz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
