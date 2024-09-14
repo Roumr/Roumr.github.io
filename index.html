@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Marked.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Custom colors */
+        .bg-primary {
+            background-color: #1e3a8a; /* Azul oscuro */
+        }
+        .bg-secondary {
+            background-color: #3b82f6; /* Azul claro */
+        }
+        .bg-light {
+            background-color: #f3f4f6; /* Gris claro */
+        }
+        .text-primary {
+            color: #1e3a8a; /* Azul oscuro */
+        }
+        .text-secondary {
+            color: #3b82f6; /* Azul claro */
+        }
+        .border-primary {
+            border-color: #1e3a8a; /* Azul oscuro */
+        }
+    </style>
+</head>
+<body class="bg-light font-sans leading-normal tracking-normal">
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Mi Portafolio</h1>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-secondary text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Bienvenido a mi portafolio</h2>
+            <p class="mb-8">Soy un técnico electricista, informático, analista de ciberseguridad y abogado asesor.</p>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-primary font-semibold py-2 px-4 rounded-lg">Contacta conmigo</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-primary">Galería de Imágenes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="overflow-hidden">
+                    <img src="image1.jpg" alt="Imagen 1" class="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg border border-gray-200">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="image2.jpg" alt="Imagen 2" class="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg border border-gray-200">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="image3.jpg" alt="Imagen 3" class="w-full h-auto transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg border border-gray-200">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-primary">Contacto</h2>
+            <form action="#" method="post" class="bg-white shadow-lg rounded-lg p-8 mx-auto max-w-lg border border-gray-200">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-medium mb-2 text-gray-700">Nombre</label>
+                    <input type="text" id="name" name="name" class="w-full border-gray-300 border rounded-lg px-4 py-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-lg font-medium mb-2 text-gray-700">Número de Teléfono</label>
+                    <input type="tel" id="phone" name="phone" class="w-full border-gray-300 border rounded-lg px-4 py-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-medium mb-2 text-gray-700">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="w-full border-gray-300 border rounded-lg px-4 py-2" required>
+                </div>
+                <button type="submit" class="bg-primary hover:bg-blue-800 text-white py-2 px-4 rounded-lg text-lg">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-primary">Formación Académica y Proyectos</h2>
+            <div id="education-content" class="text-left max-w-2xl mx-auto">
+                <!-- Aquí se cargará el contenido Markdown -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:underline mx-2">Facebook</a>
+                <a href="#" class="text-white hover:underline mx-2">Twitter</a>
+                <a href="#" class="text-white hover:underline mx-2">LinkedIn</a>
+                <a href="#" class="text-white hover:underline mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to fetch and display Markdown -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ruta al archivo Markdown
+            const markdownFile = 'education.md';
+
+            // Función para cargar el archivo Markdown
+            fetch(markdownFile)
+                .then(response => response.text())
+                .then(text => {
+                    // Convertir Markdown a HTML
+                    const htmlContent = marked(text);
+                    // Insertar el HTML convertido en el div correspondiente
+                    document.getElementById('education-content').innerHTML = htmlContent;
+                })
+                .catch(error => {
+                    console.error('Error cargando el archivo Markdown:', error);
+                });
+        });
+    </script>
+
+</body>
+</html>
